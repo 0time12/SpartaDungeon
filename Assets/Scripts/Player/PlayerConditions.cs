@@ -1,7 +1,13 @@
 using System;
 using UnityEngine;
 
-public class PlayerCondition : MonoBehaviour
+
+public interface IDamagable
+{
+    void TakePhysicalDamage(int damage);
+}
+
+public class PlayerCondition : MonoBehaviour, IDamagable
 {
     public UICondition uiCondition;
 
@@ -13,7 +19,6 @@ public class PlayerCondition : MonoBehaviour
     private void Update()
     {
         stamina.Add(stamina.passiveValue * Time.deltaTime);
-
     }
 
     public void Heal(float amount)
@@ -24,5 +29,11 @@ public class PlayerCondition : MonoBehaviour
     public void Die()
     {
         Debug.Log("Die");
+    }
+
+    public void TakePhysicalDamage(int damage)
+    {
+        health.Subtract(damage);
+        onTakeDamage?.Invoke();
     }
 }
