@@ -32,7 +32,7 @@ public class Interaction : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, maxCheckDistance, layerMask))
             {
-                if (hit.collider.gameObject != curInteractGameObject)
+                if (hit.collider.gameObject != curInteractGameObject )
                 {
                     curInteractGameObject = hit.collider.gameObject;
                     curInteractable = hit.collider.GetComponent<IInteractable>();
@@ -56,7 +56,7 @@ public class Interaction : MonoBehaviour
 
     public void OnInteractInput(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started && curInteractable != null)
+        if (context.phase == InputActionPhase.Started && curInteractable != null && curInteractGameObject.layer == LayerMask.NameToLayer("Interactable"))
         {
             curInteractable.OnInteract();
             curInteractGameObject = null;
