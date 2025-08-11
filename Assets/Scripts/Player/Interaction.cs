@@ -20,7 +20,6 @@ public class Interaction : MonoBehaviour
         camera = Camera.main;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Time.time - lastCheckTime > checkRate)
@@ -56,12 +55,21 @@ public class Interaction : MonoBehaviour
 
     public void OnInteractInput(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started && curInteractable != null && curInteractGameObject.layer == LayerMask.NameToLayer("Interactable"))
+        if (context.phase == InputActionPhase.Started)
         {
-            curInteractable.OnInteract();
-            curInteractGameObject = null;
-            curInteractable = null;
-            promptText.gameObject.SetActive(false);
+            if (curInteractable != null && curInteractGameObject != null)
+            {
+                if (curInteractGameObject.layer == LayerMask.NameToLayer("Interactable"))
+                {
+                    if (curInteractable != null)
+                    {
+                        curInteractable.OnInteract();
+                        curInteractGameObject = null;
+                        curInteractable = null;
+                        promptText.gameObject.SetActive(false);
+                    }
+                }
+            }
         }
     }
 }

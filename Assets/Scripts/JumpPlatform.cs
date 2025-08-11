@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class JumpPlatform : MonoBehaviour
 {
-    public float bounceForce = 10f;
+    public float bounceForce = 300f;
     public string targetTag = "Player";
 
     private void OnCollisionEnter(Collision collision)
