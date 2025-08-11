@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6158499886406684071}
   - component: {fileID: 7231790973949121429}
-  m_Layer: 0
+  - component: {fileID: 5679266453775771690}
+  m_Layer: 7
   m_Name: Item_Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,6 +55,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.6, z: 0.7}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5679266453775771690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4619367306784599392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0879f36f54040db458f0eda9f27c96dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 0ec0883e77bd1334aa78e66e41e59a57, type: 2}
 --- !u!1 &5952694731282331472
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,12 +79,12 @@ GameObject:
   - component: {fileID: 5038204639476870910}
   - component: {fileID: 2509492527861000085}
   - component: {fileID: 2211649948244119390}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rock1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5038204639476870910
 Transform:
