@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
+    private float baseMoveSpeed;
     private Vector2 curMovementInput;
     public float jumpPower;
     public LayerMask groundLayerMask;
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        baseMoveSpeed = moveSpeed;
     }
 
     void Start()
@@ -127,4 +129,27 @@ public class PlayerController : MonoBehaviour
         canLook = !toggle;
     }
 
+    public void AddSpeed(float amount, float duration)
+    {
+        moveSpeed += amount;
+
+        // 코루틴 정지
+        StopCoroutine("SpeedResetRoutine");
+
+        // 일정 시간 후 속도 초기화
+        StartCoroutine(SpeedResetRoutine(duration));
+    }
+
+    private IEnumerator SpeedResetRoutine(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+
+        // 원래 속도
+        ResetSpeed();
+    }
+
+    public void ResetSpeed()
+    {
+        moveSpeed = baseMoveSpeed;
+    }
 }

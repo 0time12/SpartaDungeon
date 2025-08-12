@@ -215,18 +215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -314,6 +306,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90777665}
   m_CullTransparentMesh: 1
+--- !u!1 &91049164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3141997088003509504, guid: d51814e3c1fdae94e8a7c50510772879, type: 3}
+  m_PrefabInstance: {fileID: 7520915667056614640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &91049168
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91049164}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &176084686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -406,18 +430,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -510,7 +526,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 184192585}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1991386527}
+        m_TargetAssemblyTypeName: UIInventory, Assembly-CSharp
+        m_MethodName: OnDropButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &184192585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,18 +803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -889,18 +909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -936,7 +948,7 @@ Transform:
   m_GameObject: {fileID: 336572457}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.7, z: 0}
+  m_LocalPosition: {x: 0, y: 1.46, z: 1.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1034,18 +1046,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1148,18 +1152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1413,18 +1409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1435,6 +1423,63 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1370050799779261170, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
   m_PrefabInstance: {fileID: 581750847}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &622031825
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1781412695460763918, guid: 69c3dfc1b8cfcdb418494430a2d16473, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.219
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781412695460763918, guid: 69c3dfc1b8cfcdb418494430a2d16473, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.682
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781412695460763918, guid: 69c3dfc1b8cfcdb418494430a2d16473, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781412695460763918, guid: 69c3dfc1b8cfcdb418494430a2d16473, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781412695460763918, guid: 69c3dfc1b8cfcdb418494430a2d16473, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781412695460763918, guid: 69c3dfc1b8cfcdb418494430a2d16473, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781412695460763918, guid: 69c3dfc1b8cfcdb418494430a2d16473, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781412695460763918, guid: 69c3dfc1b8cfcdb418494430a2d16473, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781412695460763918, guid: 69c3dfc1b8cfcdb418494430a2d16473, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781412695460763918, guid: 69c3dfc1b8cfcdb418494430a2d16473, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121238697706624623, guid: 69c3dfc1b8cfcdb418494430a2d16473, type: 3}
+      propertyPath: m_Name
+      value: Item_Carrot (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69c3dfc1b8cfcdb418494430a2d16473, type: 3}
 --- !u!1 &641594619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,6 +1513,63 @@ Transform:
   - {fileID: 1991386523}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &641872665
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1927158547628657466, guid: 9926bd94a6bd9f24f98f27d1718afcf3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927158547628657466, guid: 9926bd94a6bd9f24f98f27d1718afcf3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.459
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927158547628657466, guid: 9926bd94a6bd9f24f98f27d1718afcf3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927158547628657466, guid: 9926bd94a6bd9f24f98f27d1718afcf3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927158547628657466, guid: 9926bd94a6bd9f24f98f27d1718afcf3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927158547628657466, guid: 9926bd94a6bd9f24f98f27d1718afcf3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927158547628657466, guid: 9926bd94a6bd9f24f98f27d1718afcf3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927158547628657466, guid: 9926bd94a6bd9f24f98f27d1718afcf3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927158547628657466, guid: 9926bd94a6bd9f24f98f27d1718afcf3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927158547628657466, guid: 9926bd94a6bd9f24f98f27d1718afcf3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4198319988823507343, guid: 9926bd94a6bd9f24f98f27d1718afcf3, type: 3}
+      propertyPath: m_Name
+      value: Item_Soda (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9926bd94a6bd9f24f98f27d1718afcf3, type: 3}
 --- !u!1001 &664630400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1560,18 +1662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1674,18 +1768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1882,18 +1968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1996,18 +2074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2110,18 +2180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2358,6 +2420,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007395244}
   m_CullTransparentMesh: 1
+--- !u!1 &1055960062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6931223218623395180, guid: a5816bc4a1ff378478d1946194bd112e, type: 3}
+  m_PrefabInstance: {fileID: 4820558214943395233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1055960066
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055960062}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1069056971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2869,18 +2963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3875,18 +3961,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot
       objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.21698111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867505806355655373, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.21698111
-      objectReference: {fileID: 0}
+    - target: {fileID: 8142281502294251120, guid: 4802d842462924c47b6f61da0235d46c, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1991386527}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5228,7 +5306,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2146911602}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1991386527}
+        m_TargetAssemblyTypeName: UIInventory, Assembly-CSharp
+        m_MethodName: OnUseButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2146911602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5436,7 +5526,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6931223218623395180, guid: a5816bc4a1ff378478d1946194bd112e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1055960066}
   m_SourcePrefab: {fileID: 100100000, guid: a5816bc4a1ff378478d1946194bd112e, type: 3}
 --- !u!1001 &7169416367987490225
 PrefabInstance:
@@ -5550,7 +5643,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3141997088003509504, guid: d51814e3c1fdae94e8a7c50510772879, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 91049168}
   m_SourcePrefab: {fileID: 100100000, guid: d51814e3c1fdae94e8a7c50510772879, type: 3}
 --- !u!1001 &8103442066096294602
 PrefabInstance:
@@ -5620,8 +5716,10 @@ SceneRoots:
   - {fileID: 4820558214943395233}
   - {fileID: 7520915667056614640}
   - {fileID: 561469165727843170}
+  - {fileID: 622031825}
   - {fileID: 4817453585111102840}
   - {fileID: 8103442066096294602}
+  - {fileID: 641872665}
   - {fileID: 1408728658}
   - {fileID: 7169416367987490225}
   - {fileID: 641594620}

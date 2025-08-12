@@ -18,6 +18,7 @@ public class CampFire : MonoBehaviour
         for (int i = 0; i < things.Count; i++)
         {
             things[i].TakePhysicalDamage(damage);
+            Debug.Log($"DealDamage called");
         }
     }
 

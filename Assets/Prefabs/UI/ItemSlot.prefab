@@ -332,7 +332,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6485174615740585092}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8142281502294251120}
+        m_TargetAssemblyTypeName: ItemSlot, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7867505806355655373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_EffectColor: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0.5}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
 --- !u!114 &8142281502294251120
@@ -360,3 +372,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9dc5230e38f85543b27c81f22017688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  inventory: {fileID: 0}
+  button: {fileID: 4863150490093406253}
+  icon: {fileID: 5757566518463855774}
+  quatityText: {fileID: 6855671772776364696}
+  index: 0
+  equipped: 0
+  quantity: 0

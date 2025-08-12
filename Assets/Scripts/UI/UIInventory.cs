@@ -12,7 +12,7 @@ public class UIInventory : MonoBehaviour
     public Transform dropPosition;
 
     [Header("Selected Item")]
-    private ItemSlot selectedItem;
+    private ItemData selectedItem;
     private int selectedItemIndex;
     public TextMeshProUGUI selectedItemName;
     public TextMeshProUGUI selectedItemDescription;
@@ -22,8 +22,6 @@ public class UIInventory : MonoBehaviour
     public GameObject equipButton;
     public GameObject unEquipButton;
     public GameObject dropButton;
-
-    private int curEquipIndex;
 
     private PlayerController controller;
     private PlayerCondition condition;
@@ -155,47 +153,65 @@ public class UIInventory : MonoBehaviour
 
     public void ThrowItem(ItemData data)
     {
-        Instantiate(data.dropPrefab, dropPosition.position, Quaternion.Euler(Vector3.one * Random.value * 360));
+        Vector3 spawnPos = dropPosition.position + Vector3.up * 0.5f;
+        GameObject droppedObj = Instantiate(data.dropPrefab, dropPosition.position, Quaternion.Euler(Vector3.one * Random.value * 360));
+
+        Rigidbody rb = droppedObj.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = false;   // 혹시 켜져있으면 끄기
+            rb.useGravity = true;     // 중력 켜기
+            rb.velocity = Vector3.zero;
+            rb.AddForce(Vector3.down * 1f, ForceMode.Impulse); // 약간 아래로 힘 주기
+        }
     }
 
 
     public void SelectItem(int index)
     {
-        if (slots[index].item == null) return;
-
-        selectedItem = slots[index];
+        Debug.Log($"SelectItem 호출됨, index = {index}");
+        if (slots[index].item == null)
+        {
+            Debug.LogWarning($"슬롯 {index} 아이템 없음");
+            return;
+        }
+        selectedItem = slots[index].item;
         selectedItemIndex = index;
 
-        selectedItemName.text = selectedItem.item.displayName;
-        selectedItemDescription.text = selectedItem.item.description;
+        selectedItemName.text = selectedItem.displayName;
+        selectedItemDescription.text = selectedItem.description;
 
         selectedItemStatName.text = string.Empty;
         selectedItemStatValue.text = string.Empty;
 
-        for (int i = 0; i < selectedItem.item.consumables.Length; i++)
+        for (int i = 0; i < selectedItem.consumables.Length; i++)
         {
-            selectedItemStatName.text += selectedItem.item.consumables[i].type.ToString() + "\n";
-            selectedItemStatValue.text += selectedItem.item.consumables[i].value.ToString() + "\n";
+            selectedItemStatName.text += selectedItem.consumables[i].type.ToString() + "\n";
+            selectedItemStatValue.text += selectedItem.consumables[i].value.ToString() + "\n";
         }
 
-        useButton.SetActive(selectedItem.item.type == ItemType.Consumable);
-        equipButton.SetActive(selectedItem.item.type == ItemType.Equipable && !slots[index].equipped);
-        unEquipButton.SetActive(selectedItem.item.type == ItemType.Equipable && slots[index].equipped);
+        useButton.SetActive(selectedItem.type == ItemType.Consumable);
+        equipButton.SetActive(selectedItem.type == ItemType.Equipable && !slots[index].equipped);
+        unEquipButton.SetActive(selectedItem.type == ItemType.Equipable && slots[index].equipped);
         dropButton.SetActive(true);
     }
 
     public void OnUseButton()
     {
-        if (selectedItem.item.type == ItemType.Consumable)
+        if (selectedItem.type == ItemType.Consumable)
         {
-            for (int i = 0; i < selectedItem.item.consumables.Length; i++)
+            for (int i = 0; i < selectedItem.consumables.Length; i++)
             {
-                switch (selectedItem.item.consumables[i].type)
+                switch (selectedItem.consumables[i].type)
                 {
                     case ConsumableType.Health:
-                        condition.Heal(selectedItem.item.consumables[i].value);
+                        condition.Heal(selectedItem.consumables[i].value);
                         break;
-                }// 여기에서 속도
+                    case ConsumableType.Speed:
+                        controller.AddSpeed(selectedItem.consumables[i].value, 5f);
+                        break; // 속도
+
+                }
             }
             RemoveSelctedItem();
         }
@@ -203,18 +219,18 @@ public class UIInventory : MonoBehaviour
 
     public void OnDropButton()
     {
-        ThrowItem(selectedItem.item);
+        ThrowItem(selectedItem);
         RemoveSelctedItem();
     }
 
     void RemoveSelctedItem()
     {
-        selectedItem.quantity--;
+        slots[selectedItemIndex].quantity--;
 
-        if (selectedItem.quantity <= 0)
+        if (slots[selectedItemIndex].quantity <= 0)
         {
             selectedItem = null;
-            selectedItem.item = null;
+            slots[selectedItemIndex].item = null;
             selectedItemIndex = -1;
             ClearSelectedItemWindow();
         }
