@@ -208,7 +208,7 @@ public class UIInventory : MonoBehaviour
                         condition.Heal(selectedItem.consumables[i].value);
                         break;
                     case ConsumableType.Speed:
-                        controller.AddSpeed(selectedItem.consumables[i].value, 5f);
+                        controller.AddSpeed(selectedItem.consumables[i].value, 5f); //value만큼 빨라지고 5f초 후에 초기화
                         break; // 속도
 
                 }
