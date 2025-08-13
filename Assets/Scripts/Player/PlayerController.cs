@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public Action inventory;
     private Rigidbody _rigidbody;
 
+    private PlayerCondition playerCondition;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        playerCondition = GetComponent<PlayerCondition>();
     }
 
     private void FixedUpdate()
@@ -70,7 +72,18 @@ public class PlayerController : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started && IsGrounded())
         {
-            _rigidbody.AddForce(Vector2.up * jumpPower, ForceMode.Impulse);
+            const float jumpStaminaCost = 5f;
+
+            if (playerCondition.CheckStamina(jumpStaminaCost))
+            {
+                _rigidbody.AddForce(Vector2.up * jumpPower, ForceMode.Impulse);
+
+                playerCondition.Jump(jumpStaminaCost);
+            }
+            else
+            {
+                Debug.Log("스테미나가 부족합니다.");
+            }
         }
     }
 

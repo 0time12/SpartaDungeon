@@ -26,6 +26,16 @@ public class PlayerCondition : MonoBehaviour, IDamagable
         health.Add(amount);
     }
 
+    public void Jump(float amount)
+    {
+        stamina.Subtract(amount);
+    }
+
+    public bool CheckStamina(float requiredAmount)
+    {
+        return stamina.curValue >= requiredAmount;
+    }
+
     public void Die()
     {
         Debug.Log("Die");
